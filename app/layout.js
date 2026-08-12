@@ -14,17 +14,20 @@ export const metadata = {
   metadataBase: new URL("https://sanepar-site.vercel.app"),
 
   title: {
-    default: "Sanepar",
+    default: "Sanepar | Serviços, Segunda Via e Fatura",
     template: "%s | Sanepar",
   },
 
   description:
-    "Informações sobre a Sanepar, segunda via e fatura. Consulte orientações e acesse os canais oficiais da companhia.",
+    "Informações sobre serviços da Sanepar, segunda via, fatura e canais oficiais de atendimento.",
 
   keywords: [
     "Sanepar",
     "Sanepar segunda via",
+    "segunda via Sanepar",
     "Sanepar fatura",
+    "fatura Sanepar",
+    "conta Sanepar",
   ],
 
   robots: {
@@ -33,21 +36,23 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "/",
-  },
-
-  openGraph: {
-    title: "Sanepar",
-    description:
-      "Informações sobre a Sanepar, segunda via e fatura.",
-    url: "https://sanepar-site.vercel.app",
-    siteName: "Sanepar",
-    locale: "pt_BR",
-    type: "website",
+    canonical: "https://sanepar-site.vercel.app/",
   },
 
   icons: {
-    icon: "/icon.svg",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+
+  openGraph: {
+    title: "Sanepar | Serviços, Segunda Via e Fatura",
+    description:
+      "Informações sobre serviços da Sanepar, segunda via, fatura e canais oficiais de atendimento.",
+    url: "https://sanepar-site.vercel.app/",
+    siteName: "Sanepar",
+    locale: "pt_BR",
+    type: "website",
   },
 };
 
