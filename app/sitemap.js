@@ -1,9 +1,22 @@
 export default function sitemap() {
-  const base = "https://SEU-DOMINIO.com";
+  const baseUrl = "https://sanepar-site.vercel.app";
+
   return [
-    { url: base, lastModified: new Date() },
-    { url: `${base}/sanepar`, lastModified: new Date() },
-    { url: `${base}/sanepar-segunda-via`, lastModified: new Date() },
-    { url: `${base}/sanepar-fatura`, lastModified: new Date() }
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sanepar`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sanepar-segunda-via`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sanepar-fatura`,
+      lastModified: new Date(),
+    },
   ];
 }
