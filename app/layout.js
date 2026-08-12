@@ -7,14 +7,48 @@ const official = {
   invoice: "https://www.sanepar.com.br/minha-fatura",
   pay: "https://www.sanepar.com.br/como-pagar",
   digital: "https://www.sanepar.com.br/fatura-digital",
-  contact: "https://www.sanepar.com.br/contatos"
+  contact: "https://www.sanepar.com.br/contatos",
 };
 
 export const metadata = {
-  metadataBase: new URL("https://SEU-DOMINIO.com"),
-  title: { default: "Sanepar", template: "%s | Sanepar" },
-  description: "Informações sobre Sanepar, segunda via e fatura.",
-  robots: { index: true, follow: true }
+  metadataBase: new URL("https://sanepar-site.vercel.app"),
+
+  title: {
+    default: "Sanepar",
+    template: "%s | Sanepar",
+  },
+
+  description:
+    "Informações sobre a Sanepar, segunda via e fatura. Consulte orientações e acesse os canais oficiais da companhia.",
+
+  keywords: [
+    "Sanepar",
+    "Sanepar segunda via",
+    "Sanepar fatura",
+  ],
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "Sanepar",
+    description:
+      "Informações sobre a Sanepar, segunda via e fatura.",
+    url: "https://sanepar-site.vercel.app",
+    siteName: "Sanepar",
+    locale: "pt_BR",
+    type: "website",
+  },
+
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -23,23 +57,83 @@ export default function RootLayout({ children }) {
       <body>
         <header className="header">
           <div className="container nav">
-            <Link className="brand" href="/">Sanepar</Link>
+            <Link className="brand" href="/">
+              Sanepar
+            </Link>
+
             <nav aria-label="Navegação principal">
-              <Link href="/sanepar">Sanepar</Link>
-              <Link href="/sanepar-segunda-via">Segunda via</Link>
-              <Link href="/sanepar-fatura">Fatura</Link>
+              <Link href="/sanepar">
+                Sanepar
+              </Link>
+
+              <Link href="/sanepar-segunda-via">
+                Segunda via
+              </Link>
+
+              <Link href="/sanepar-fatura">
+                Fatura
+              </Link>
             </nav>
           </div>
         </header>
+
         <main>{children}</main>
+
         <footer className="footer">
           <div className="container">
-            <p>Site informativo independente. Não somos o site oficial da Sanepar.</p>
+            <p>
+              Site informativo independente. Não somos o site oficial da
+              Sanepar.
+            </p>
+
             <div className="footer-links">
-              <a href={official.home} target="_blank" rel="noopener noreferrer">Site oficial da Sanepar</a>
-              <a href={official.secondCopy} target="_blank" rel="noopener noreferrer">Segunda via oficial</a>
-              <a href={official.invoice} target="_blank" rel="noopener noreferrer">Minha Fatura oficial</a>
-              <a href={official.contact} target="_blank" rel="noopener noreferrer">Contatos oficiais</a>
+              <a
+                href={official.home}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Site oficial da Sanepar
+              </a>
+
+              <a
+                href={official.secondCopy}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Segunda via oficial
+              </a>
+
+              <a
+                href={official.invoice}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Minha Fatura oficial
+              </a>
+
+              <a
+                href={official.pay}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Como pagar
+              </a>
+
+              <a
+                href={official.digital}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Fatura Digital
+              </a>
+
+              <a
+                href={official.contact}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contatos oficiais
+              </a>
             </div>
           </div>
         </footer>
