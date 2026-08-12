@@ -1,6 +1,11 @@
 export default function robots() {
   return {
-    rules: [{ userAgent: "*", allow: "/" }],
-    sitemap: "https://SEU-DOMINIO.com/sitemap.xml"
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+      },
+    ],
+    sitemap: "https://sanepar-site.vercel.app/sitemap.xml",
   };
 }
