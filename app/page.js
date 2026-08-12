@@ -1,18 +1,29 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Sanepar | Serviços, Segunda Via e Fatura",
+  title: "Sanepar | Segunda Via, Fatura e Serviços",
   description:
-    "Informações sobre serviços da Sanepar, segunda via, fatura e canais oficiais de atendimento.",
+    "Encontre informações sobre a Sanepar, segunda via, fatura, pagamento e acesso aos canais oficiais de atendimento.",
+  keywords: [
+    "Sanepar",
+    "Sanepar segunda via",
+    "segunda via Sanepar",
+    "Sanepar fatura",
+    "fatura Sanepar",
+    "conta Sanepar",
+    "serviços Sanepar",
+  ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Sanepar | Serviços, Segunda Via e Fatura",
+    title: "Sanepar | Segunda Via, Fatura e Serviços",
     description:
-      "Informações sobre serviços da Sanepar, segunda via, fatura e canais oficiais de atendimento.",
-    type: "website",
+      "Informações sobre segunda via, fatura, pagamento e canais oficiais da Sanepar.",
+    url: "https://sanepar-site.vercel.app/",
+    siteName: "Sanepar",
     locale: "pt_BR",
+    type: "website",
   },
 };
 
@@ -25,7 +36,7 @@ export default function Home() {
 
           <p>
             Encontre informações sobre serviços da Sanepar, segunda via,
-            fatura e os principais canais oficiais de atendimento.
+            fatura, pagamento e os principais canais oficiais de atendimento.
           </p>
 
           <a
@@ -43,20 +54,20 @@ export default function Home() {
         <h2>Encontre o que você precisa</h2>
 
         <div className="card-grid">
-          <div className="card">
+          <article className="card">
             <h2>Sanepar</h2>
 
             <p>
-              Informações gerais e acesso aos principais canais oficiais da
-              Sanepar.
+              Informações gerais, serviços e acesso aos principais canais
+              oficiais da Sanepar.
             </p>
 
             <Link className="btn" href="/sanepar">
               Ver página
             </Link>
-          </div>
+          </article>
 
-          <div className="card">
+          <article className="card">
             <h2>Sanepar Segunda Via</h2>
 
             <p>
@@ -67,9 +78,9 @@ export default function Home() {
             <Link className="btn" href="/sanepar-segunda-via">
               Ver página
             </Link>
-          </div>
+          </article>
 
-          <div className="card">
+          <article className="card">
             <h2>Sanepar Fatura</h2>
 
             <p>
@@ -80,7 +91,7 @@ export default function Home() {
             <Link className="btn" href="/sanepar-fatura">
               Ver página
             </Link>
-          </div>
+          </article>
         </div>
       </section>
     </>
