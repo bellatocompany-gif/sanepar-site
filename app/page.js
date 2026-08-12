@@ -1,15 +1,22 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Sanepar",
+  title: "Sanepar | Serviços, Segunda Via e Fatura",
   description:
-    "Informações sobre a Sanepar, serviços, segunda via e fatura. Encontre orientações e acesse os canais oficiais da companhia.",
+    "Informações sobre serviços da Sanepar, segunda via, fatura e canais oficiais de atendimento.",
   alternates: {
-    canonical: "/sanepar",
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Sanepar | Serviços, Segunda Via e Fatura",
+    description:
+      "Informações sobre serviços da Sanepar, segunda via, fatura e canais oficiais de atendimento.",
+    type: "website",
+    locale: "pt_BR",
   },
 };
 
-export default function SaneparPage() {
+export default function Home() {
   return (
     <>
       <section className="hero">
@@ -33,91 +40,47 @@ export default function SaneparPage() {
       </section>
 
       <section className="content container">
-        <h2>Informações sobre a Sanepar</h2>
-
-        <p>
-          A Sanepar oferece canais digitais para consulta de serviços,
-          atendimento, pagamentos, faturas e outros assuntos relacionados ao
-          abastecimento de água e ao saneamento.
-        </p>
-
-        <p>
-          Para consultar informações diretamente nos canais oficiais, utilize
-          o site da Sanepar e os serviços disponibilizados pela companhia.
-        </p>
+        <h2>Encontre o que você precisa</h2>
 
         <div className="card-grid">
-          <article className="card">
+          <div className="card">
+            <h2>Sanepar</h2>
+
+            <p>
+              Informações gerais e acesso aos principais canais oficiais da
+              Sanepar.
+            </p>
+
+            <Link className="btn" href="/sanepar">
+              Ver página
+            </Link>
+          </div>
+
+          <div className="card">
             <h2>Sanepar Segunda Via</h2>
 
             <p>
-              Saiba onde encontrar informações sobre a segunda via da conta
-              pelos canais oficiais da Sanepar.
+              Veja como localizar a segunda via da conta pelos canais oficiais
+              da Sanepar.
             </p>
 
             <Link className="btn" href="/sanepar-segunda-via">
-              Sanepar Segunda Via
+              Ver página
             </Link>
-          </article>
+          </div>
 
-          <article className="card">
+          <div className="card">
             <h2>Sanepar Fatura</h2>
 
             <p>
-              Consulte informações sobre fatura, pagamento e serviços digitais
-              relacionados à conta da Sanepar.
+              Informações sobre fatura, pagamento e serviços digitais da
+              Sanepar.
             </p>
 
             <Link className="btn" href="/sanepar-fatura">
-              Sanepar Fatura
+              Ver página
             </Link>
-          </article>
-        </div>
-
-        <div className="content-links">
-          <h2>Canais oficiais</h2>
-
-          <ul>
-            <li>
-              <a
-                href="https://www.sanepar.com.br/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Site oficial da Sanepar
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.sanepar.com.br/segunda-via"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Segunda via no site oficial
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.sanepar.com.br/minha-fatura"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Minha Fatura no site oficial
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.sanepar.com.br/como-pagar"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Informações oficiais sobre como pagar
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
       </section>
     </>
