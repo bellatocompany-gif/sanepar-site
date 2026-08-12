@@ -30,6 +30,10 @@ export const metadata = {
     "conta Sanepar",
   ],
 
+  verification: {
+    google: "x6tpoqMiykgni4qCcTNaDramUUXhQiYNbG9kC0mkyso",
+  },
+
   robots: {
     index: true,
     follow: true,
